@@ -23,7 +23,7 @@ Public Class AddressLabelForm
         addressLabelString.Add(StateTextbox.Text & " ")
         addressLabelString.Add(ZipCodeTextBox.Text)
 
-
+        'Check that all text boxes have a value otherwise do not display and alert user-TJR
         DisplayLabel.Text = (addressLabelString(0) & addressLabelString(1) & vbNewLine & addressLabelString(2) & vbNewLine & addressLabelString(3) & addressLabelString(4) & addressLabelString(5))
 
 
@@ -32,7 +32,7 @@ Public Class AddressLabelForm
 
     'Clear button clears the list and the label 
     Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
-
+        'Empty strings do not contain space - TJR
         FirstNameTextbox.Text = " "
         LastNameTextbox.Text = " "
         StreetAddressTextbox.Text = " "
